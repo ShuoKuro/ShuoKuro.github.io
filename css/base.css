@@ -1,0 +1,85 @@
+/* =============================================
+   Base — Variables, Reset, Typography, Scrollbar
+   ============================================= */
+
+/* --- Design Tokens --- */
+:root {
+    --bg: #050505;
+    --bg-secondary: #0a0a0f;
+    --bg-card: rgba(255, 255, 255, 0.03);
+    --bg-card-hover: rgba(255, 255, 255, 0.06);
+    --text: #e8e8e8;
+    --text-muted: #666;
+    --text-dim: #444;
+    --accent: #7877ff;
+    --accent2: #e573ff;
+    --accent3: #43e7ff;
+    --gradient: linear-gradient(135deg, #7877ff 0%, #e573ff 50%, #43e7ff 100%);
+    --gradient-subtle: linear-gradient(135deg, rgba(120, 119, 255, 0.15), rgba(229, 115, 255, 0.15));
+    --border: rgba(255, 255, 255, 0.06);
+    --border-hover: rgba(255, 255, 255, 0.12);
+    --radius: 16px;
+    --radius-sm: 8px;
+    --font: 'Space Grotesk', 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- Reset --- */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) transparent;
+}
+
+body {
+    font-family: var(--font);
+    line-height: 1.7;
+    color: var(--text);
+    background-color: var(--bg);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+/* --- Links --- */
+a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+a:hover {
+    color: var(--accent2);
+}
+
+/* --- Selection --- */
+::selection {
+    background: rgba(120, 119, 255, 0.3);
+    color: #fff;
+}
+
+/* --- Scrollbar --- */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(120, 119, 255, 0.3);
+    border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(120, 119, 255, 0.5);
+}
